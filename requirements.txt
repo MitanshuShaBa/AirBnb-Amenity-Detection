@@ -1,0 +1,18 @@
+# local package
+#-e .
+
+# external requirements
+#click
+#Sphinx
+#coverage
+#awscli
+flake8==3.9.1
+#python-dotenv>=0.5.1
+oidv6==1.0.5
+
+# backwards compatibility
+#pathlib2
+
+# Data Version Control
+dvc
+dvc-gdrive
