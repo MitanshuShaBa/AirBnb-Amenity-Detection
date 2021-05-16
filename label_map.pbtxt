@@ -1,0 +1,120 @@
+item {
+id: 1
+name: 'Toilet'
+}
+item {
+id: 2
+name: 'Swimming pool'
+}
+item {
+id: 3
+name: 'Bed'
+}
+item {
+id: 4
+name: 'Billiard table'
+}
+item {
+id: 5
+name: 'Sink'
+}
+item {
+id: 6
+name: 'Fountain'
+}
+item {
+id: 7
+name: 'Oven'
+}
+item {
+id: 8
+name: 'Ceiling fan'
+}
+item {
+id: 9
+name: 'Television'
+}
+item {
+id: 10
+name: 'Microwave oven'
+}
+item {
+id: 11
+name: 'Gas stove'
+}
+item {
+id: 12
+name: 'Refrigerator'
+}
+item {
+id: 13
+name: 'Kitchen & dining room table'
+}
+item {
+id: 14
+name: 'Washing machine'
+}
+item {
+id: 15
+name: 'Bathtub'
+}
+item {
+id: 16
+name: 'Stairs'
+}
+item {
+id: 17
+name: 'Fireplace'
+}
+item {
+id: 18
+name: 'Pillow'
+}
+item {
+id: 19
+name: 'Mirror'
+}
+item {
+id: 20
+name: 'Shower'
+}
+item {
+id: 21
+name: 'Couch'
+}
+item {
+id: 22
+name: 'Countertop'
+}
+item {
+id: 23
+name: 'Coffeemaker'
+}
+item {
+id: 24
+name: 'Dishwasher'
+}
+item {
+id: 25
+name: 'Sofa bed'
+}
+item {
+id: 26
+name: 'Tree house'
+}
+item {
+id: 27
+name: 'Towel'
+}
+item {
+id: 28
+name: 'Porch'
+}
+item {
+id: 29
+name: 'Wine rack'
+}
+item {
+id: 30
+name: 'Jacuzzi'
+}
