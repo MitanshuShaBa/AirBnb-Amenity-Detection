@@ -32,11 +32,14 @@ subset = ["Toilet",
           "Wine_rack",
           "Jacuzzi"]
 
+
 def save_label_map(label_map_path, data):
     with open(label_map_path, 'w+') as f:
         for i in range(len(data)):
-            line = "item {\nid: " + str(i + 1) + "\nname: '" + data[i] + "'\n}\n"
+            line = "item {\nid: " + \
+                str(i + 1) + "\nname: '" + data[i].lower() + "'\n}\n"
             f.write(line)
+
 
 if __name__ == '__main__':
     trainable_classes_file = [cat.replace("_", " ") for cat in subset]
