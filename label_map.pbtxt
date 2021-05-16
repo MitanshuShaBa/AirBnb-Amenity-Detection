@@ -1,120 +1,120 @@
 item {
 id: 1
-name: 'Toilet'
+name: 'toilet'
 }
 item {
 id: 2
-name: 'Swimming pool'
+name: 'swimming pool'
 }
 item {
 id: 3
-name: 'Bed'
+name: 'bed'
 }
 item {
 id: 4
-name: 'Billiard table'
+name: 'billiard table'
 }
 item {
 id: 5
-name: 'Sink'
+name: 'sink'
 }
 item {
 id: 6
-name: 'Fountain'
+name: 'fountain'
 }
 item {
 id: 7
-name: 'Oven'
+name: 'oven'
 }
 item {
 id: 8
-name: 'Ceiling fan'
+name: 'ceiling fan'
 }
 item {
 id: 9
-name: 'Television'
+name: 'television'
 }
 item {
 id: 10
-name: 'Microwave oven'
+name: 'microwave oven'
 }
 item {
 id: 11
-name: 'Gas stove'
+name: 'gas stove'
 }
 item {
 id: 12
-name: 'Refrigerator'
+name: 'refrigerator'
 }
 item {
 id: 13
-name: 'Kitchen & dining room table'
+name: 'kitchen & dining room table'
 }
 item {
 id: 14
-name: 'Washing machine'
+name: 'washing machine'
 }
 item {
 id: 15
-name: 'Bathtub'
+name: 'bathtub'
 }
 item {
 id: 16
-name: 'Stairs'
+name: 'stairs'
 }
 item {
 id: 17
-name: 'Fireplace'
+name: 'fireplace'
 }
 item {
 id: 18
-name: 'Pillow'
+name: 'pillow'
 }
 item {
 id: 19
-name: 'Mirror'
+name: 'mirror'
 }
 item {
 id: 20
-name: 'Shower'
+name: 'shower'
 }
 item {
 id: 21
-name: 'Couch'
+name: 'couch'
 }
 item {
 id: 22
-name: 'Countertop'
+name: 'countertop'
 }
 item {
 id: 23
-name: 'Coffeemaker'
+name: 'coffeemaker'
 }
 item {
 id: 24
-name: 'Dishwasher'
+name: 'dishwasher'
 }
 item {
 id: 25
-name: 'Sofa bed'
+name: 'sofa bed'
 }
 item {
 id: 26
-name: 'Tree house'
+name: 'tree house'
 }
 item {
 id: 27
-name: 'Towel'
+name: 'towel'
 }
 item {
 id: 28
-name: 'Porch'
+name: 'porch'
 }
 item {
 id: 29
-name: 'Wine rack'
+name: 'wine rack'
 }
 item {
 id: 30
-name: 'Jacuzzi'
+name: 'jacuzzi'
 }
