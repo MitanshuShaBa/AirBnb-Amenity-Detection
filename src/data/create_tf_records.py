@@ -9,8 +9,8 @@ label_map = label_map_util.load_labelmap("label_map.pbtxt")
 label_map_dict = label_map_util.get_label_map_dict(label_map)
 
 
-def class_text_to_int(row_label):
-    return label_map_dict[row_label]
+def class_text_to_int(row_label: str):
+    return label_map_dict[row_label.replace("_", " ")]
 
 
 def create_tf_example(img_path,
@@ -58,34 +58,35 @@ def create_tf_example(img_path,
     return tf_example
 
 
-def main():
+def main(input_dir="tmp", type="validation", output_dir="tmp"):
+    with tf.io.TFRecordWriter(os.path.join(output_dir, f"{type}.tfrecords")) as writer:
+        data_dir = os.path.join(input_dir, type)
 
-    with tf.io.TFRecordWriter("tmp/img.records") as writer:
-        for file in os.listdir("tmp/validation/towel"):
-            annotations_list = []
-            if file == 'labels':
-                continue
-            print(f'{file} processing')
-            label_path = os.path.join(
-                "tmp/validation/towel", "labels", file.replace("jpg", "txt"))
-            with open(label_path) as label:
-                lines = [line.strip() for line in label.readlines()]
-                for line in lines:
-                    annotation = {}
-                    annotation['category'] = line.split()[0]
-                    annotation['bbox'] = line.split()[1:]
-                    annotations_list.append(annotation)
+        for category in os.listdir(data_dir):
+            category_dir = os.path.join(data_dir, category)
 
-            tf_example = create_tf_example(
-                file, annotations_list, "tmp/validation/towel")
-            writer.write(tf_example.SerializeToString())
-            print('Successfully created the TFRecord for file: {}'.format(
-                file))
+            for file in os.listdir(category_dir):
+                annotations_list = []
+                if file == 'labels':
+                    continue
+                print(f'{file} of {category} processing')
 
-    # writer.close()
-    # print('Successfully created the TFRecord file: {}'.format(args.output_path))
-    # if args.csv_path is not None:
-    #     examples.to_csv(args.csv_path, index=None)
-    #     print('Successfully created the CSV file: {}'.format(args.csv_path))
+                label_path = os.path.join(
+                    category_dir, "labels", file.replace("jpg", "txt"))
+                with open(label_path) as label:
+                    lines = [line.strip() for line in label.readlines()]
+                    for line in lines:
+                        annotation = {}
+                        annotation['category'] = line.split()[0]
+                        annotation['bbox'] = line.split()[1:]
+                        annotations_list.append(annotation)
+
+                tf_example = create_tf_example(
+                    file, annotations_list, category_dir)
+                writer.write(tf_example.SerializeToString())
+                print('Successfully created the TFRecord for file: {}'.format(
+                    file))
+
+
 if __name__ == '__main__':
-    main()
+    main(input_dir="tmp", type="validation", output_dir="tmp/records")
